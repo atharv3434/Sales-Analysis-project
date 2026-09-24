@@ -7,7 +7,6 @@ from pyspark.sql.functions import (
     round as spark_round
 )
 
-
 def create_spark_session():
     return (
         SparkSession.builder
@@ -16,7 +15,6 @@ def create_spark_session():
         .getOrCreate()
     )
 
-
 def read_sales_data(spark, path):
     return (
         spark.read
@@ -24,7 +22,6 @@ def read_sales_data(spark, path):
         .option("inferSchema", True)
         .csv(path)
     )
-
 
 def clean_data(df):
     required_columns = [
@@ -49,7 +46,6 @@ def clean_data(df):
 
     return df
 
-
 def add_calculated_columns(df):
     return (
         df.withColumn(
@@ -66,7 +62,6 @@ def add_calculated_columns(df):
         )
     )
 
-
 def product_sales(df):
     return (
         df.groupBy("product")
@@ -78,7 +73,6 @@ def product_sales(df):
         .orderBy(col("total_revenue").desc())
     )
 
-
 def city_sales(df):
     return (
         df.groupBy("city")
@@ -88,7 +82,6 @@ def city_sales(df):
         )
         .orderBy(col("total_revenue").desc())
     )
-
 
 def monthly_sales(df):
     return (
@@ -101,7 +94,6 @@ def monthly_sales(df):
         .orderBy("month")
     )
 
-
 def write_output(df, path):
     (
         df.coalesce(1)
@@ -110,7 +102,6 @@ def write_output(df, path):
         .option("header", True)
         .csv(path)
     )
-
 
 def main():
     spark = create_spark_session()
@@ -154,7 +145,6 @@ def main():
 
     finally:
         spark.stop()
-
 
 if __name__ == "__main__":
     main()
