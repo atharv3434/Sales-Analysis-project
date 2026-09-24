@@ -1,0 +1,16 @@
+order_id,order_date,product,category,city,quantity,unit_price,unit_cost
+1001,2026-01-05,Laptop,Electronics,Pune,2,65000,52000
+1002,2026-01-08,Mouse,Electronics,Bengaluru,5,800,450
+1003,2026-01-12,Keyboard,Electronics,Mumbai,3,1800,1100
+1004,2026-01-18,Monitor,Electronics,Pune,2,12000,8500
+1005,2026-02-02,Laptop,Electronics,Bengaluru,1,68000,53000
+1006,2026-02-09,Desk,Furniture,Pune,4,7500,5000
+1007,2026-02-15,Chair,Furniture,Mumbai,6,4200,2800
+1008,2026-02-21,Mouse,Electronics,Pune,10,750,400
+1009,2026-03-03,Keyboard,Electronics,Bengaluru,4,1900,1150
+1010,2026-03-10,Monitor,Electronics,Mumbai,3,12500,8700
+1011,2026-03-17,Desk,Furniture,Bengaluru,2,7800,5100
+1012,2026-03-25,Chair,Furniture,Pune,5,4000,2700
+1013,2026-04-01,Laptop,Electronics,Mumbai,2,67000,52500
+1014,2026-04-07,Mouse,Electronics,Bengaluru,8,780,420
+1015,2026-04-15,Monitor,Electronics,Pune,1,11800,8300
