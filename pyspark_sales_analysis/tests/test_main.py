@@ -1,9 +1,7 @@
 import unittest
 
 from pyspark.sql import SparkSession
-
 from src.main import clean_data, add_calculated_columns
-
 
 class TestSalesAnalysis(unittest.TestCase):
 
@@ -52,7 +50,6 @@ class TestSalesAnalysis(unittest.TestCase):
         self.assertEqual(result["revenue"], 200.0)
         self.assertEqual(result["cost"], 120.0)
         self.assertEqual(result["profit"], 80.0)
-
 
 if __name__ == "__main__":
     unittest.main()
